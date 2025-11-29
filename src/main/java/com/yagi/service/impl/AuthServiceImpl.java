@@ -2,7 +2,6 @@ package com.yagi.service.impl;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 import org.springframework.security.core.Authentication;
@@ -81,8 +80,6 @@ public class AuthServiceImpl implements AuthService {
 
         Authentication authentication = authenticate(email, password);
         SecurityContextHolder.getContext().setAuthentication(authentication);
-        Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
-        String role = authorities.stream().map(GrantedAuthority::getAuthority).findFirst().orElse(null);
         String jwt = jwtProvider.generateToken(authentication);
         User user = userRepository.findByEmail(email);
         user.setLastLogin(LocalDateTime.now());
