@@ -50,7 +50,18 @@ yagi-pos-frontend/npm-debug.log*
 yagi-pos-frontend/yarn-debug.log*
 yagi-pos-frontend/yarn-error.log*
 yagi-pos-frontend/pnpm-debug.log*
+yagi-pos-frontend/lerna-debug.log*
+
+yagi-pos-frontend/dist-ssr/
+yagi-pos-frontend/*.local
 
 # OS
 .DS_Store
 Thumbs.db
+
+# IDE / Editors
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
