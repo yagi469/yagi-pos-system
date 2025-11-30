@@ -1,5 +1,6 @@
 package com.yagi.mapper;
 
+import com.yagi.model.Category;
 import com.yagi.model.Product;
 import com.yagi.model.Store;
 import com.yagi.payload.dto.ProductDto;
@@ -15,15 +16,16 @@ public class ProductMapper {
                 .description(product.getDescription())
                 .mrp(product.getMrp())
                 .sellingPrice(product.getSellingPrice())
+                .category(CategoryMapper.toDTO(product.getCategory()))
                 .storeId(product.getStore() != null ? product.getStore().getId() : null)
                 .image(product.getImage())
                 .createdAt(product.getCreatedAt())
                 .updatedAt(product.getUpdatedAt())
-                // .categoryId(product.getCategoryId())
                 .build();
     }
 
-    public static Product toEntity(ProductDto productDto, Store store) {
+    public static Product toEntity(
+            ProductDto productDto, Store store, Category category) {
         return Product.builder()
                 .name(productDto.getName())
                 .brand(productDto.getBrand())
@@ -31,7 +33,9 @@ public class ProductMapper {
                 .description(productDto.getDescription())
                 .mrp(productDto.getMrp())
                 .sellingPrice(productDto.getSellingPrice())
+                .image(productDto.getImage())
                 .store(store)
+                .category(category)
                 .build();
     }
 }
