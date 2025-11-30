@@ -31,3 +31,26 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Frontend (Node.js) ###
+yagi-pos-frontend/node_modules/
+yagi-pos-frontend/dist/
+yagi-pos-frontend/build/
+yagi-pos-frontend/.env.local
+yagi-pos-frontend/.env.*.local
+yagi-pos-frontend/.cache/
+yagi-pos-frontend/.vite/
+yagi-pos-frontend/.parcel-cache/
+yagi-pos-frontend/coverage/
+
+# Logs
+yagi-pos-frontend/logs
+yagi-pos-frontend/*.log
+yagi-pos-frontend/npm-debug.log*
+yagi-pos-frontend/yarn-debug.log*
+yagi-pos-frontend/yarn-error.log*
+yagi-pos-frontend/pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
