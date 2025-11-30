@@ -10,7 +10,7 @@ const shiftData = {
 }
 const ShiftInformation = () => {
     return (
-        <Card className="my-4">
+        <Card>
             <CardContent>
                 <h2 className="text-xl font-semibold mb-4">Shift Information</h2>
 

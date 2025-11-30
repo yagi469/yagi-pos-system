@@ -14,7 +14,7 @@ const shiftData = {
 }
 const SalesSummaeryCard = () => {
     return (
-        <Card className="my-4">
+        <Card>
             <CardContent>
                 <h2 className="text-xl font-semibold mb-4">Sales Summary</h2>
 
