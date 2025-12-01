@@ -1,5 +1,5 @@
 import './App.css';
-import ShiftSummaryPage from './pages/cashier/Shift Report/ShiftSummaryPage';
+import ShiftSummaryPage from './pages/cashier/ShiftReport/ShiftSummaryPage';
 
 function App() {
   return (
