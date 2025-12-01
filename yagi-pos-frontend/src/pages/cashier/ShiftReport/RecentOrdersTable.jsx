@@ -1,3 +1,5 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import React from "react";
 
 const shiftData = {
@@ -10,14 +12,14 @@ const shiftData = {
         },
         {
             id: 2,
-            createdAt: "01:25 PM",
-            paymentType: "CASH",
-            totalAmount: 2000,
+            createdAt: "03:25 PM",
+            paymentType: "CARD",
+            totalAmount: 14899,
         },
         {
             id: 3,
             createdAt: "01:25 PM",
-            paymentType: "CASH",
+            paymentType: "UPI",
             totalAmount: 1200,
         }
     ]
@@ -25,9 +27,31 @@ const shiftData = {
 
 const RecentOrdersTable = () => {
     return (
-        <div>
-            <h1>Recent Orders Table</h1>
-        </div>
+        <Card>
+            <CardContent>
+                <h2 className="text-xl font-semibold mb-4">Recent Orders</h2>
+                <Table>
+                    <TableHeader>
+                        <TableRow>
+                            <TableHead className="w-[150px]">Order ID</TableHead>
+                            <TableHead className="w-[150px]">Time</TableHead>
+                            <TableHead className="w-[100px]">Payment</TableHead>
+                            <TableHead className="text-right">Amount</TableHead>
+                        </TableRow>
+                    </TableHeader>
+                    <TableBody>
+                        {shiftData.recentOrders.map((order) => (
+                            <TableRow key={order.id}>
+                                <TableCell>{order.id}</TableCell>
+                                <TableCell>{order.createdAt}</TableCell>
+                                <TableCell>{order.paymentType}</TableCell>
+                                <TableCell className="text-right">₹{order.totalAmount}</TableCell>
+                            </TableRow>
+                        ))}
+                    </TableBody>
+                </Table>
+            </CardContent>
+        </Card>
     );
 };
 
