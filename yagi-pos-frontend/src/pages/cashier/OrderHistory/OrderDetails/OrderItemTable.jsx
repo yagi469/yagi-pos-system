@@ -27,7 +27,9 @@ const OrderItemTable = ({ selectedOrder }) => {
                                 </TableCell>
                                 <TableCell>
                                     <div className='flex flex-col'>
-                                        <span className='font-medium'>{item.product.name.slice(0, 20)}...</span>
+                                        <span className='font-medium'>
+                                            {item.product.name.slice(0, 20)}...
+                                        </span>
                                         <span className='text-xs text-gray-500'>SKU: {item.product?.sku}</span>
                                     </div>
                                 </TableCell>
