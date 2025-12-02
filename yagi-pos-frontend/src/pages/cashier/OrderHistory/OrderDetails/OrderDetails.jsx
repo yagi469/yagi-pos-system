@@ -10,7 +10,7 @@ const OrderDetails = ({ selectedOrder }) => {
                 <OrderInformation selectedOrder={selectedOrder} />
                 <CustomerInformation selectedOrder={selectedOrder} />
             </div>
-            <OrderItemTable />
+            <OrderItemTable selectedOrder={selectedOrder} />
         </div>
     );
 };

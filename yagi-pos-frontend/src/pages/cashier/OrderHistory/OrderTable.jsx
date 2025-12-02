@@ -15,6 +15,28 @@ const orders = [
         totalAmount: 100,
         paymentType: 'CASH',
         status: 'COMPLETED',
+        items: [
+            {
+                id: 1,
+                product: {
+                    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop',
+                    name: 'men blue t-shirt',
+                    sku: 'SHRT-S-COTTON-BLU-2025',
+                    sellingPrice: 499,
+                },
+                quantity: 2,
+            },
+            {
+                id: 2,
+                product: {
+                    image: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=400&h=400&fit=crop',
+                    name: 'men blue t-shirt',
+                    sku: 'SHRT-S-COTTON-BLU-2025',
+                    sellingPrice: 499,
+                },
+                quantity: 2,
+            },
+        ],
     },
     {
         id: 2,
@@ -25,6 +47,28 @@ const orders = [
         },
         paymentType: 'Card',
         totalAmount: 200,
+        items: [
+            {
+                id: 1,
+                product: {
+                    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop',
+                    name: 'men blue t-shirt',
+                    sku: 'SHRT-S-COTTON-BLU-2025',
+                    sellingPrice: 499,
+                },
+                quantity: 2,
+            },
+            {
+                id: 2,
+                product: {
+                    image: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=400&h=400&fit=crop',
+                    name: 'men blue t-shirt',
+                    sku: 'SHRT-S-COTTON-BLU-2025',
+                    sellingPrice: 499,
+                },
+                quantity: 2,
+            },
+        ],
     },
     {
         id: 3,
@@ -36,6 +80,28 @@ const orders = [
         paymentType: 'CASH',
         totalAmount: 300,
         status: 'COMPLETED',
+        items: [
+            {
+                id: 1,
+                product: {
+                    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop',
+                    name: 'men blue t-shirt',
+                    sku: 'SHRT-S-COTTON-BLU-2025',
+                    sellingPrice: 499,
+                },
+                quantity: 2,
+            },
+            {
+                id: 2,
+                product: {
+                    image: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=400&h=400&fit=crop',
+                    name: 'men blue t-shirt',
+                    sku: 'SHRT-S-COTTON-BLU-2025',
+                    sellingPrice: 499,
+                },
+                quantity: 2,
+            },
+        ],
     },
 ];
 
