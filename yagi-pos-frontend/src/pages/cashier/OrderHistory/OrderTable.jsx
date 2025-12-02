@@ -7,9 +7,10 @@ import { Printer } from 'lucide-react';
 const orders = [
     {
         id: 1,
-        createdAt: '2025-12-01 10:00:00',
+        createdAt: 'Jul 8, 2025, 12:37 PM',
         customer: {
-            fullName: 'John Doe',
+            fullName: 'Pablo Pandy',
+            phone: '1234567897',
         },
         totalAmount: 100,
         paymentType: 'CASH',
@@ -17,18 +18,20 @@ const orders = [
     },
     {
         id: 2,
-        createdAt: '2025-12-02 11:00:00',
+        createdAt: 'Jul 8, 2025, 12:38 PM',
         customer: {
             fullName: 'Jane Smith',
+            phone: '1234567898',
         },
         paymentType: 'Card',
         totalAmount: 200,
     },
     {
         id: 3,
-        createdAt: '2025-12-03 12:00:00',
+        createdAt: 'Jul 8, 2025, 12:39 PM',
         customer: {
             fullName: 'John Doe',
+            phone: '1234567899',
         },
         paymentType: 'CASH',
         totalAmount: 300,
@@ -36,20 +39,20 @@ const orders = [
     },
 ];
 
-const OrderTable = ({ setShowOrderInvoiceDialog }) => {
+const OrderTable = ({ handleViewOrderDetails }) => {
     return (
         <div>
             <h2 className="text-xl font-semibold mb-4">Recent Orders</h2>
             <Table>
                 <TableHeader>
                     <TableRow>
-                        <TableHead className="w-[150px]">Order ID</TableHead>
-                        <TableHead className="w-[150px]">Date/Time</TableHead>
-                        <TableHead className="w-[100px]">Customer</TableHead>
-                        <TableHead className="w-[100px]">Amount</TableHead>
-                        <TableHead className="w-[100px]">Payment Type</TableHead>
-                        <TableHead className="w-[100px]">Status</TableHead>
-                        <TableHead className="w-[100px]">Action</TableHead>
+                        <TableHead>Order ID</TableHead>
+                        <TableHead>Date/Time</TableHead>
+                        <TableHead>Customer</TableHead>
+                        <TableHead>Amount</TableHead>
+                        <TableHead>Payment Type</TableHead>
+                        <TableHead>Status</TableHead>
+                        <TableHead className="text-right">Action</TableHead>
                     </TableRow>
                 </TableHeader>
                 <TableBody>
@@ -58,21 +61,17 @@ const OrderTable = ({ setShowOrderInvoiceDialog }) => {
                             <TableCell>{order.id}</TableCell>
                             <TableCell>{order.createdAt}</TableCell>
                             <TableCell>{order.customer?.fullName}</TableCell>
+                            <TableCell>{order.totalAmount}</TableCell>
                             <TableCell>{order.paymentType}</TableCell>
-                            <TableCell >₹{order.totalAmount}</TableCell>
                             <TableCell>{order.status}</TableCell>
                             <TableCell>
                                 <div className="flex justify-end gap-2">
-                                    <Button onClick={() => setShowOrderInvoiceDialog(true)} variant={"ghost"} size={"icon"}>
+                                    <Button onClick={() => handleViewOrderDetails(order)} variant={"ghost"} size={"icon"}>
                                         <EyeIcon className='h-4 w-4' />
                                     </Button>
 
                                     <Button variant={"ghost"} size={"icon"}>
                                         <Printer className='h-4 w-4' />
-                                    </Button>
-
-                                    <Button variant={"ghost"} size={"icon"}>
-                                        <EyeIcon className='h-4 w-4' />
                                     </Button>
                                 </div>
                             </TableCell>
