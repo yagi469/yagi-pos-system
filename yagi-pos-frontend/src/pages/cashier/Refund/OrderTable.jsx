@@ -30,7 +30,7 @@ const orders = [
                 id: 2,
                 product: {
                     image: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=400&h=400&fit=crop',
-                    name: 'men blue t-shirt',
+                    name: 'men blue t-shirt aaaaaaaaaaaaaaaa',
                     sku: 'SHRT-S-COTTON-BLU-2025',
                     sellingPrice: 499,
                 },
@@ -62,7 +62,7 @@ const orders = [
                 id: 2,
                 product: {
                     image: 'https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?w=400&h=400&fit=crop',
-                    name: 'men blue t-shirt',
+                    name: 'men blue t-shirt aaaaaaaaaaaaa',
                     sku: 'SHRT-S-COTTON-BLU-2025',
                     sellingPrice: 499,
                 },

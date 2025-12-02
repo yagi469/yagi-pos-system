@@ -19,10 +19,10 @@ const RefundPage = () => {
                 {!selectedOrder ? (
                     <OrderTable handleSelectOrder={handleSelectOrder} />
                 ) : (
-                    <>
+                    <div className='flex w-full h-full'>
                         <OrderDetailsSection handleSelectOrder={handleSelectOrder} selectedOrder={selectedOrder} />
                         <ReturnItemSection />
-                    </>
+                    </div>
                 )}
             </div>
             {selectedOrder && <ReturnReceiptDialog />}
