@@ -105,7 +105,7 @@ const orders = [
     },
 ];
 
-const OrderTable = () => {
+const OrderTable = ({ handleSelectOrder }) => {
     return (
         <div className="flex-1 overflow-auto p-4">
             <Table>
@@ -129,16 +129,10 @@ const OrderTable = () => {
                             <TableCell>{order.totalAmount}</TableCell>
                             <TableCell>{order.paymentType}</TableCell>
                             <TableCell>{order.status}</TableCell>
-                            <TableCell>
-                                <div className="flex justify-end gap-2">
-                                    <Button variant={"ghost"} size={"icon"}>
-                                        <EyeIcon className='h-4 w-4' />
-                                    </Button>
-
-                                    <Button variant={"ghost"} size={"icon"}>
-                                        <Printer className='h-4 w-4' />
-                                    </Button>
-                                </div>
+                            <TableCell className="text-right">
+                                <Button onClick={() => handleSelectOrder(order)}>
+                                    Select for Return
+                                </Button>
                             </TableCell>
                         </TableRow>
                     ))}

@@ -7,6 +7,9 @@ import ReturnReceiptDialog from './ReturnReceiptDialog';
 
 const RefundPage = () => {
     const [selectedOrder, setSelectedOrder] = useState(null);
+    const handleSelectOrder = (order) => {
+        setSelectedOrder(order);
+    };
     return (
         <div className='h-full flex flex-col'>
             <div className='p-4 bg-card border-b'>
@@ -14,10 +17,10 @@ const RefundPage = () => {
             </div>
             <div className='flex-1 flex overflow-hidden'>
                 {!selectedOrder ? (
-                    <OrderTable />
+                    <OrderTable handleSelectOrder={handleSelectOrder} />
                 ) : (
                     <>
-                        <OrderDetailsSection />
+                        <OrderDetailsSection handleSelectOrder={handleSelectOrder} selectedOrder={selectedOrder} />
                         <ReturnItemSection />
                     </>
                 )}
